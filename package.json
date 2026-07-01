@@ -1,0 +1,16 @@
+{
+  "name": "casa-do-vale",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page + backend de reservas para a Casa do Vale (Barcelos)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^9.0.3"
+  }
+}

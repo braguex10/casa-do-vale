@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa do Vale — Alojamento Local em Barcelos</title>
+<meta name="description" content="Casa do Vale — alojamento local em Barcelos, Portugal. Conforto moderno, natureza e sofisticação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== INTRO ===== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-inner">
+    <span class="intro-eyebrow">Bem-vindo à</span>
+    <h1 class="intro-title">CASA<br>DO VALE</h1>
+    <span class="intro-sub">Barcelos · Portugal</span>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<header class="hero card" id="home">
+  <img class="hero-bg" id="heroBg" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" alt="Casa do Vale — fachada moderna ao entardecer">
+  <div class="hero-overlay"></div>
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+  <nav class="navbar">
+    <a href="#home" class="logo">CASA<span>DO VALE</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link">Início</a></li>
+      <li><a href="#sobre" class="nav-link">Sobre</a></li>
+      <li><a href="#quartos" class="nav-link">Quartos</a></li>
+      <li><a href="#comodidades" class="nav-link">Comodidades</a></li>
+      <li><a href="#galeria" class="nav-link">Galeria</a></li>
+      <li><a href="#localizacao" class="nav-link">Localização</a></li>
+      <li><a href="#contactos" class="nav-link">Contactos</a></li>
+    </ul>
+    <div class="nav-meta">
+      <span class="hero-location">BARCELOS, PORTUGAL</span>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="hero-content">
+    <h1 class="hero-title">CASA<br>DO VALE</h1>
+    <p class="hero-tagline">Um novo padrão de conforto e natureza</p>
+  </div>
+
+  <a href="#contactos" class="scroll-cta">Reservar agora ↗</a>
+  <div class="scroll-indicator" aria-hidden="true"><span></span></div>
+</header>
+
+<!-- ===== SOBRE ===== -->
+<section class="section fade-in" id="sobre">
+  <div class="section-inner about-grid">
+    <div>
+      <span class="eyebrow">Sobre a casa</span>
+      <h2 class="section-title">ONDE O TEMPO<br>ABRANDA</h2>
+    </div>
+    <div class="about-text">
+      <p>A Casa do Vale nasceu do desejo de criar um refúgio onde a arquitetura contemporânea dialoga com a paisagem do Minho. Rodeada de verde e a poucos minutos do centro histórico de Barcelos, a casa combina linhas limpas, materiais nobres e grandes vãos envidraçados que trazem a luz natural e a natureza para dentro de cada espaço.</p>
+      <p>Cada divisão foi pensada para o conforto de quem procura descanso sem abdicar de sofisticação — desde a cozinha totalmente equipada até aos quartos com vista para o vale. Um espaço para famílias, casais ou grupos de amigos que valorizam privacidade, design e autenticidade.</p>
+      <p>Mais do que uma estadia, a Casa do Vale é uma pausa. Um convite para redescobrir o ritmo do Minho, entre tradição e modernidade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMODIDADES ===== -->
+<section class="section card fade-in" id="comodidades">
+  <div class="section-inner">
+    <span class="eyebrow">O que oferecemos</span>
+    <h2 class="section-title">NOSSAS COMODIDADES</h2>
+
+    <div class="amenities-grid">
+      <article class="amenity fade-in">
+        <div class="amenity-img">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Piscina exterior">
+        </div>
+        <span class="amenity-number">01</span>
+        <h3>PISCINA PRIVADA</h3>
+        <p>Piscina exterior com vista para o vale, rodeada de deck em madeira para dias de sol em total privacidade.</p>
+      </article>
+
+      <article class="amenity fade-in">
+        <div class="amenity-img">
+          <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=800&q=80" alt="Espaço de trabalho com Wi-Fi">
+        </div>
+        <span class="amenity-number">02</span>
+        <h3>WI-FI & HOME OFFICE</h3>
+        <p>Internet de alta velocidade e uma secretária dedicada, ideal para quem quer conciliar trabalho e descanso.</p>
+      </article>
+
+      <article class="amenity fade-in">
+        <div class="amenity-img">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Cozinha totalmente equipada">
+        </div>
+        <span class="amenity-number">03</span>
+        <h3>COZINHA EQUIPADA</h3>
+        <p>Cozinha completa com eletrodomésticos modernos, pronta para preparar desde um pequeno-almoço a um jantar em grupo.</p>
+      </article>
+
+      <article class="amenity fade-in">
+        <div class="amenity-img">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Vista panorâmica sobre o vale">
+        </div>
+        <span class="amenity-number">04</span>
+        <h3>VISTA PANORÂMICA</h3>
+        <p>Amplas janelas e varandas orientadas a poente, com vista aberta sobre o vale e os campos do Minho.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANTA DA CASA ===== -->
+<section class="section card fade-in" id="quartos">
+  <div class="section-inner plan-grid">
+    <div class="plan-info">
+      <span class="eyebrow">Planta da casa</span>
+      <h2 class="section-title">PLANTA DA CASA</h2>
+      <p class="plan-area">A ÁREA TOTAL É 145 M²</p>
+
+      <ul class="plan-list">
+        <li><span>Sala de Estar</span><span>28 m²</span></li>
+        <li><span>Cozinha</span><span>16 m²</span></li>
+        <li><span>Quarto Principal (suite)</span><span>19.5 m²</span></li>
+        <li><span>Quarto 2</span><span>14 m²</span></li>
+        <li><span>Quarto 3</span><span>12.5 m²</span></li>
+        <li><span>Casa de banho principal</span><span>7 m²</span></li>
+        <li><span>Casa de banho social</span><span>5 m²</span></li>
+        <li><span>Terraço exterior</span><span>32 m²</span></li>
+        <li><span>Hall & arrumos</span><span>11 m²</span></li>
+      </ul>
+    </div>
+
+    <div class="plan-image">
+      <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=900&q=80" alt="Quarto principal da Casa do Vale">
+      <span class="plan-credit">@casadovale</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EQUIPAMENTO POR DIVISÃO ===== -->
+<section class="section card fade-in" id="equipamento">
+  <div class="section-inner">
+    <span class="eyebrow">Equipamento</span>
+    <h2 class="section-title">O QUE CADA ESPAÇO OFERECE</h2>
+    <p class="location-text">Tudo o que precisa já está incluído, divisão a divisão. Clique para ver o detalhe.</p>
+
+    <div class="rooms-accordion">
+      <details class="room-item" open>
+        <summary>
+          <span class="room-number">01</span>
+          <span class="room-name">Sala de Estar</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Sofá em L</li>
+          <li>Smart TV com Netflix</li>
+          <li>Sistema de som</li>
+          <li>Mesa de centro</li>
+          <li>Ar condicionado</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">02</span>
+          <span class="room-name">Cozinha</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Fogão de indução e forno</li>
+          <li>Micro-ondas</li>
+          <li>Frigorífico</li>
+          <li>Máquina de café e torradeira</li>
+          <li>Panelas, frigideiras e utensílios</li>
+          <li>Loiça e talheres completos</li>
+          <li>Máquina de lavar loiça</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">03</span>
+          <span class="room-name">Quarto Principal (suite)</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Cama king-size</li>
+          <li>Roupa de cama de qualidade hotel</li>
+          <li>Closet</li>
+          <li>Casa de banho privativa</li>
+          <li>Varanda com vista para o vale</li>
+          <li>Ar condicionado</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">04</span>
+          <span class="room-name">Quarto 2</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Cama de casal</li>
+          <li>Roupeiro</li>
+          <li>Secretária</li>
+          <li>Cortinas blackout</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">05</span>
+          <span class="room-name">Quarto 3</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Duas camas individuais</li>
+          <li>Roupeiro</li>
+          <li>Ideal para crianças ou hóspedes extra</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">06</span>
+          <span class="room-name">Casa de Banho Principal</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Duche walk-in</li>
+          <li>Banheira</li>
+          <li>Bidé</li>
+          <li>Toalhas e produtos de higiene incluídos</li>
+          <li>Secador de cabelo</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">07</span>
+          <span class="room-name">Casa de Banho Social</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Duche</li>
+          <li>Lavatório</li>
+          <li>Toalhas incluídas</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">08</span>
+          <span class="room-name">Terraço Exterior</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Mesa de refeições exterior</li>
+          <li>Espreguiçadeiras</li>
+          <li>Churrasqueira</li>
+          <li>Iluminação ambiente</li>
+        </ul>
+      </details>
+
+      <details class="room-item">
+        <summary>
+          <span class="room-number">09</span>
+          <span class="room-name">Hall & Arrumos</span>
+          <span class="room-toggle" aria-hidden="true">+</span>
+        </summary>
+        <ul class="room-list">
+          <li>Guarda-roupa de entrada</li>
+          <li>Máquina de lavar e secar roupa</li>
+          <li>Tábua e ferro de engomar</li>
+          <li>Aspirador</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALERIA ===== -->
+<section class="section fade-in" id="galeria">
+  <div class="section-inner">
+    <span class="eyebrow">Galeria</span>
+    <h2 class="section-title">O ESPAÇO EM DETALHE</h2>
+
+    <div class="gallery-grid">
+      <div class="gallery-item fade-in tall"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Fachada exterior"></div>
+      <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Sala de estar"></div>
+      <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=80" alt="Casa de banho principal"></div>
+      <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=80" alt="Quarto"></div>
+      <div class="gallery-item fade-in tall"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=900&q=80" alt="Cozinha"></div>
+      <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Casa de banho social"></div>
+      <div class="gallery-item fade-in tall"><img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=900&q=80" alt="Duche walk-in da suite"></div>
+      <div class="gallery-item fade-in"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80" alt="Casa à noite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCALIZAÇÃO ===== -->
+<section class="section card fade-in" id="localizacao">
+  <div class="section-inner location-grid">
+    <div>
+      <span class="eyebrow">Localização</span>
+      <h2 class="section-title">NO CORAÇÃO<br>DO MINHO</h2>
+      <p class="location-text">A Casa do Vale situa-se nos arredores de Barcelos, a poucos minutos do centro histórico e junto às margens do rio Cávado — um ponto de partida ideal para explorar a região.</p>
+
+      <ul class="poi-list">
+        <li><span>01</span> Centro Histórico de Barcelos — 8 min</li>
+        <li><span>02</span> Praia Fluvial do Cávado — 10 min</li>
+        <li><span>03</span> Mercado de Barcelos (feira semanal) — 12 min</li>
+        <li><span>04</span> Aeroporto Francisco Sá Carneiro — 35 min</li>
+      </ul>
+    </div>
+
+    <div class="map-wrap">
+      <iframe title="Mapa Barcelos, Portugal" src="https://maps.google.com/maps?q=Barcelos,%20Portugal&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESERVAS / CONTACTOS ===== -->
+<section class="section card fade-in" id="contactos">
+  <div class="section-inner contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">Reservas</span>
+      <h2 class="section-title">VAMOS<br>MARCAR A SUA ESTADIA</h2>
+      <p class="location-text">Envie-nos as suas datas e vamos confirmar a disponibilidade em poucas horas.</p>
+
+      <div class="contact-details">
+        <a href="mailto:goncalovbbraga@gmail.com">goncalovbbraga@gmail.com</a>
+        <a href="tel:+351931807129">+351 931 807 129</a>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="https://wa.me/351931807129" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+          <a href="#" aria-label="Booking">Booking</a>
+        </div>
+      </div>
+    </div>
+
+    <form class="booking-form" id="bookingForm">
+      <label>Nome
+        <input type="text" name="nome" required placeholder="O seu nome">
+      </label>
+      <label>Email
+        <input type="email" name="email" required placeholder="o.seu@email.com">
+      </label>
+      <div class="form-row">
+        <label>Check-in
+          <input type="date" name="checkin" required>
+        </label>
+        <label>Check-out
+          <input type="date" name="checkout" required>
+        </label>
+      </div>
+      <label>Telefone (opcional)
+        <input type="tel" name="telefone" placeholder="+351 9XX XXX XXX">
+      </label>
+      <label>Mensagem
+        <textarea name="mensagem" rows="4" placeholder="Número de hóspedes, pedidos especiais..."></textarea>
+      </label>
+      <button type="submit" class="btn-submit">Reservar agora ↗</button>
+      <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Casa do Vale — Barcelos, Portugal</p>
+  <p>Design inspirado em <span>Bressi</span></p>
+</footer>
+
+<script type="module" src="three-hero.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
