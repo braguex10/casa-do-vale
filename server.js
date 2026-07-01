@@ -1,7 +1,7 @@
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 const express = require('express');
-const nodemailer = require('nodemailer');
+const { Resend } = require('resend');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -11,32 +11,22 @@ const OWNER_PHONE = process.env.OWNER_PHONE || '+351931807129';
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-function buildTransporter() {
-  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) return null;
-  return nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
-    }
-  });
-}
-
-const transporter = buildTransporter();
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 async function sendOrLog(subject, text, replyTo) {
-  if (!transporter) {
-    console.log(`\n[EMAIL não configurado — defina EMAIL_USER/EMAIL_PASS no .env]\n${subject}\n${text}\n`);
+  if (!resend) {
+    console.log(`\n[EMAIL não configurado — defina RESEND_API_KEY no .env]\n${subject}\n${text}\n`);
     return { ok: true, note: 'Pedido registado no servidor (envio de email por configurar).' };
   }
-  await transporter.sendMail({
-    from: `"Casa do Vale — Site" <${process.env.EMAIL_USER}>`,
+  const { error } = await resend.emails.send({
+    from: 'Casa do Vale <onboarding@resend.dev>',
     to: OWNER_EMAIL,
     replyTo,
     subject,
     text
   });
+  if (error) throw new Error(error.message || 'Falha ao enviar email via Resend');
   return { ok: true };
 }
 
@@ -80,12 +70,12 @@ app.post('/api/reservar', async (req, res) => {
 });
 
 app.get('/api/health', (req, res) => {
-  res.json({ ok: true, emailConfigured: Boolean(transporter), ownerPhone: OWNER_PHONE });
+  res.json({ ok: true, emailConfigured: Boolean(resend), ownerPhone: OWNER_PHONE });
 });
 
 app.listen(PORT, () => {
   console.log(`Casa do Vale a correr em http://localhost:${PORT}`);
-  if (!transporter) {
-    console.log('Aviso: EMAIL_USER/EMAIL_PASS não definidos — os pedidos serão apenas registados na consola. Ver .env.example.');
+  if (!resend) {
+    console.log('Aviso: RESEND_API_KEY não definida — os pedidos serão apenas registados na consola. Ver .env.example.');
   }
 });
