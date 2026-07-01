@@ -61,11 +61,7 @@ app.post('/api/reservar', async (req, res) => {
     res.json(result);
   } catch (err) {
     console.error('Erro ao enviar email de reserva:', err);
-    res.status(500).json({
-      ok: false,
-      error: 'Não foi possível enviar o pedido. Tente novamente ou contacte-nos diretamente.',
-      debug: { code: err.code, message: err.message, response: err.response }
-    });
+    res.status(500).json({ ok: false, error: 'Não foi possível enviar o pedido. Tente novamente ou contacte-nos diretamente.' });
   }
 });
 
